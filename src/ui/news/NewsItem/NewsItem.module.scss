@@ -1,0 +1,212 @@
+@import "../../../style/vars";
+
+.block {
+  position: relative;
+  &.home {
+    max-width: 100%;
+
+    .img-wrap {
+      height: 240px;
+    }
+    .info-wrap {
+      margin: 16px 0 4px;
+    }
+    .link {
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  &.similar-news {
+    max-width: 100%;
+
+    .img-wrap {
+      height: 160px;
+
+      @media screen and (min-width: $tablet) {
+        height: 240px;
+      }
+    }
+    .info-wrap {
+      margin: 16px 0 8px;
+    }
+    .link {
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  &.main-news {
+    .img-wrap {
+      width: 100%;
+
+      height: 240px;
+
+      @media screen and (min-width: $tablet) {
+        height: 280px;
+      }
+
+      @media screen and (min-width: $desk_md) {
+        height: auto;
+        aspect-ratio: 1/1;
+        max-width: 322px;
+      }
+    }
+    .info-wrap {
+      margin: 16px 0 6px;
+
+      @media screen and (min-width: $tablet) {
+        margin: 10px 0 6px;
+      }
+    }
+
+    .link-wrap {
+      min-height: 66px;
+    }
+    .link {
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+
+      @media screen and (min-width: $desk_sm) {
+        -webkit-line-clamp: 4;
+      }
+    }
+  }
+
+  &.news {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid $medium-gray;
+    &:last-child {
+      border-color: transparent;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .img-wrap {
+      height: 78px;
+      flex-shrink: 0;
+      width: 100px;
+
+      @media screen and (min-width: $tablet) {
+        height: 180px;
+        width: 100%;
+      }
+    }
+    .info-wrap {
+      margin: 0 0 6px;
+      @media screen and (min-width: $tablet) {
+        margin: 10px 0 10px;
+      }
+    }
+    .link {
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 5;
+
+      font-size: 16px !important;
+
+      @media screen and (min-width: $tablet) {
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  &.home-all-news {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      gap: 10px;
+    }
+    @media screen and (min-width: $desk_md) {
+      gap: 16px;
+    }
+
+    .img-wrap {
+      // aspect-ratio: 1/1;
+      width: 100%;
+      height: 127px;
+
+      @media screen and (min-width: $tablet) {
+        width: 157px;
+        height: 127px;
+        flex-shrink: 0;
+      }
+      @media screen and (min-width: $desk_md) {
+        width: 205px;
+      }
+    }
+
+    .info-wrap {
+      margin: 8px 0 4px;
+      @media screen and (min-width: $tablet) {
+        margin: 0 0 4px;
+      }
+    }
+    .link {
+      font-size: 14px !important;
+      font-weight: 400 !important;
+
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      min-height: 34px;
+
+      @media screen and (min-width: $tablet) {
+        -webkit-line-clamp: 6;
+      }
+    }
+  }
+
+  &.home-adv {
+    padding-bottom: 14px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $medium-gray;
+    &:last-child {
+      border-color: transparent;
+      margin-bottom: 0;
+    }
+
+    .info-wrap {
+      margin: 0 0 4px;
+    }
+    .link {
+      font-size: 14px !important;
+      font-weight: 400 !important;
+      display: inline-block !important;
+    }
+  }
+}
+
+.test {
+  position: absolute;
+  background-color: $opacity-black;
+  color: greenyellow;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+
+.img-wrap {
+  position: relative;
+}
+
+.info-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

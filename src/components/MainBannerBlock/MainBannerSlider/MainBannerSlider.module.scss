@@ -1,0 +1,116 @@
+@import "../../../style/vars";
+
+.swiper {
+  // min-height: 200px;
+  padding: 32px 0 38px;
+  color: $color-text-secondary;
+
+  @media screen and (min-width: $tablet) {
+    padding: 48px 0 38px;
+  }
+  @media screen and (min-width: $desk_sm) {
+    padding: 56px 0 38px;
+  }
+}
+
+.slide {
+  background-color: $color-block-bg;
+}
+
+.wrap {
+  overflow: hidden;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.first-block {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 15px 32px 40px;
+  min-height: 356px;
+
+  @media screen and (min-width: $tablet) {
+    min-height: 387px;
+    min-width: 344px;
+    max-width: 552px;
+    width: 50%;
+    flex-shrink: 0;
+    padding: 32px 15px 39px 44px;
+  }
+
+  @media screen and (min-width: $desk_md) {
+    min-height: 544px;
+    padding: 80px 80px 136px 88px;
+  }
+}
+
+.text-block {
+  flex-grow: 1;
+}
+
+.text {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  line-height: 1.25;
+}
+
+.title {
+  margin: 16px 0 8px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -145px;
+    top: 15px;
+    width: 136px;
+    height: 4px;
+    background-color: $dark-red;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin: 24px 0 14px;
+    position: relative;
+
+    &::before {
+      left: -150px;
+    }
+  }
+
+  @media screen and (min-width: $desk_md) {
+    margin: 20px 0 10px;
+    position: relative;
+
+    &::before {
+      top: 24px;
+      left: -160px;
+    }
+  }
+}
+
+.btn-wrap {
+  max-width: 222px;
+  margin-top: 24px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 238px;
+  }
+}
+
+.img-wrap {
+  // min-height: 220px;
+  // display: flex;
+  position: relative;
+  max-height: 350px;
+  width: 100%;
+  aspect-ratio: 327/220;
+
+  @media screen and (min-width: $tablet) {
+    aspect-ratio: unset;
+    max-height: 100%;
+    width: 100%;
+  }
+}

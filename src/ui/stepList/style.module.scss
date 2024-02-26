@@ -1,0 +1,68 @@
+@import "@vars";
+
+.list-container {
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 120px;
+  }
+}
+
+.list-item {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 60px auto;
+  column-gap: 26px;
+  padding-bottom: 35px;
+
+  &:not(:last-child):before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    background-color: #ed2e38;
+    left: 29px;
+  }
+
+  &__counter {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: $russo-one-font;
+    color: white;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ed2e38;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .title {
+    font-family: $open-sans-font;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 18px;
+    }
+  }
+
+  .content {
+    font-family: $open-sans-font;
+
+    p {
+      font-size: 18px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    ul,
+    li {
+      list-style: initial !important;
+    }
+  }
+}

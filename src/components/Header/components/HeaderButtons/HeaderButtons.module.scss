@@ -1,0 +1,56 @@
+@import "../../../../style/vars";
+
+.block {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 22px;
+  }
+
+  @media screen and (min-width: $desk_sm) {
+    gap: 8px;
+    top: 16px;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-search {
+    path {
+      transition: fill $transition;
+    }
+    @include hoverWrapper {
+      path {
+        fill: $color-close-icon-hover;
+      }
+    }
+  }
+
+  &-lk {
+    path {
+      transition: stroke $transition;
+    }
+    @include hoverWrapper {
+      path {
+        stroke: $color-close-icon-hover;
+      }
+    }
+  }
+
+  &-burger {
+    @media screen and (min-width: $desk_sm) {
+      display: none;
+    }
+  }
+}

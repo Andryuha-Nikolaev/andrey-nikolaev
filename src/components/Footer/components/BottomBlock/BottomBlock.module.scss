@@ -1,0 +1,30 @@
+@import "../../../../style/vars";
+
+.block {
+  color: $dark-gray;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: $desk_md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.agreements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $desk_sm) {
+    gap: 24px;
+  }
+  @media screen and (min-width: $desk_md) {
+    gap: 72px;
+  }
+}

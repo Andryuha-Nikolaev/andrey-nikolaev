@@ -1,0 +1,9 @@
+@import "../../../../style/vars";
+
+.block {
+  max-width: 332px;
+
+  @media screen and (min-width: $desk_md) {
+    max-width: 436px;
+  }
+}

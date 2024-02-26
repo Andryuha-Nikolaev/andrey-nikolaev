@@ -1,0 +1,219 @@
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+// color
+$black: #1f1f1f;
+$middle-black: #4c4c4c;
+$opacity-black: rgba(0, 0, 0, 0.7);
+$white: #fff;
+$blue: #003580;
+$dark-red: #ed2e38;
+$middle-red: #f15860;
+$dark-gray: #b2b6b9;
+$medium-gray: #e0e2e2;
+$light-gray: #f6f6f6;
+
+// texts
+$color-text-primary: $black;
+$color-text-secondary: $white;
+$color-text-error: $dark-red;
+
+// links
+$link-color: $black;
+$link-color-hover: $dark-red;
+$link-color-focus: $dark-gray;
+
+// social
+$color-social-link-bg: $white;
+$color-social-link-hover: $blue;
+
+// buttons
+$button-bg: $dark-red;
+$color-button-hover: $middle-red;
+$button-bg-var2: $black;
+$color-button-hover-var2: $middle-black;
+$color-copy-button-hover: $white;
+
+// background
+$header-bg: $blue;
+$footer-bg: $blue;
+$color-block-bg: $black;
+
+// modal
+$color-modal-overlay: $opacity-black;
+$color-modal-bg: $white;
+
+// icons
+$color-close-icon-hover: $dark-red;
+$color-burger-icon-hover: $dark-red;
+$color-burger-icon: $white;
+
+// scrollbar
+$color-scrollbar-track: $medium-gray;
+$color-scrollbar-thumb: $dark-gray;
+
+// breakpoints
+$mobile_sm: 370px;
+$mobile: 576px;
+$tablet: 768px;
+$desk_sm: 1024px;
+$desk_md: 1280px;
+$desk_lg: 1440px;
+$desk_max: 1900px;
+
+// header & archor
+$header-height-mobile: 67px;
+$header-height-tablet: 84px;
+$header-height-desk: 104px;
+
+// transition
+$transition-duration: 0.2s;
+$transition-fast-duration: 0.1s;
+$transition-animation: ease-in-out;
+$transition: $transition-duration $transition-animation;
+$transition-fast: $transition-fast-duration $transition-animation;
+
+// z-index
+$z-index-calendar: 50;
+$z-index-burger: 98;
+$z-index-header: 99;
+$z-index-modal: 100;
+$z-index-scrollbar: 105;
+$z-index-cookies-block: 102;
+
+// forms
+$input-height: 48px;
+$input-border-hover: $white;
+$color-checkbox-checked: $dark-red;
+$color-checkbox-hover: $blue;
+$color-checkbox-border: $black;
+
+// fonts
+$open-sans-font: var(--open-sans-font), sans-serif;
+$russo-one-font: var(--russo-one-font), sans-serif;
+
+// date picker
+$color-picker-hover: $dark-gray;
+
+// other
+$box-shadow: 0 0 4px 0 rgba(31, 46, 58, 0.2);
+
+// mixins
+@mixin hoverWrapper {
+  @media screen and (min-width: $desk_md) {
+    &:hover {
+      @content;
+    }
+  }
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// заголовок блока
+@mixin text-h1 {
+  font-family: $russo-one-font;
+  font-size: 32px;
+  font-weight: 400;
+  @media screen and (min-width: $tablet) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $desk_md) {
+    font-size: 57px;
+  }
+}
+
+// заголовок блока
+@mixin text-h2 {
+  font-family: $russo-one-font;
+  font-size: 32px;
+  font-weight: 400;
+  @media screen and (min-width: $tablet) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $desk_md) {
+    font-size: 57px;
+  }
+}
+
+// заголовок первого блока на главной
+@mixin text-h3 {
+  font-family: $russo-one-font;
+  font-weight: 400;
+  font-size: 32px;
+  @media screen and (min-width: $tablet) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $desk_md) {
+    font-size: 43px;
+  }
+}
+
+// заголовок чисел в блоке Фередерация дзюдо России
+@mixin text-h4 {
+  font-family: $russo-one-font;
+  font-weight: 400;
+  font-size: 24px;
+  @media screen and (min-width: $tablet) {
+    font-size: 43px;
+  }
+  @media screen and (min-width: $desk_md) {
+  }
+}
+
+// подзаголовок в блоке новостей и проектов
+@mixin text-h5 {
+  font-family: $russo-one-font;
+  font-weight: 400;
+  font-size: 24px;
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $desk_md) {
+    font-size: 32px;
+  }
+}
+
+// маленький заголовок
+@mixin text-h6 {
+  font-weight: 400;
+  font-size: 24px;
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $desk_md) {
+    font-size: 24px;
+  }
+}
+
+@mixin text-lg {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@mixin text-md {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@mixin text-sm {
+  font-weight: 400;
+  font-size: 10px;
+}

@@ -1,0 +1,32 @@
+@import "../../../../style/vars";
+.custom-scrollbar {
+  @media (hover: none) {
+    display: none;
+  }
+}
+
+.custom-scrollbar-track {
+  z-index: $z-index-scrollbar;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+}
+
+.custom-scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background-color: rgba(70, 70, 70, 0.5); /* Цвет ползунка */
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(70, 70, 70, 0.8);
+  }
+
+  &.clicked {
+    background-color: rgba(70, 70, 70, 1);
+  }
+}

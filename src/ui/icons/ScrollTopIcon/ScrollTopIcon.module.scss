@@ -1,0 +1,17 @@
+@import "../../../style/vars";
+
+.icon {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: $button-bg;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color $transition;
+
+  @include hoverWrapper {
+    background-color: $color-button-hover;
+  }
+}

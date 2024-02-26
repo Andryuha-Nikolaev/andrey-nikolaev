@@ -1,0 +1,133 @@
+@import "../../../style/vars";
+
+.root {
+  text-decoration: underline;
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link-color-focus;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.button {
+  background-color: $button-bg;
+  width: 100%;
+
+  min-height: 49px;
+  transition:
+    background-color $transition,
+    color $transition,
+    border-color $transition;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  gap: 8px;
+  position: relative;
+
+  max-width: 438px;
+  @media screen and (min-width: $tablet) {
+    max-width: 332px;
+  }
+
+  @media screen and (min-width: $desk_md) {
+    max-width: 438px;
+  }
+
+  @include hoverWrapper {
+    background-color: $color-button-hover;
+  }
+
+  &.loading {
+    pointer-events: none;
+    background-color: $color-button-hover;
+  }
+
+  &.variant2 {
+    background-color: $button-bg-var2;
+    color: $white;
+
+    @include hoverWrapper {
+      background-color: $color-button-hover-var2;
+    }
+  }
+
+  &.variant3 {
+    background-color: $white;
+    color: $black;
+
+    @include hoverWrapper {
+      color: $white;
+      background-color: $color-button-hover-var2;
+    }
+  }
+
+  &.left {
+    margin: 0;
+  }
+  &.center {
+    margin: 0 auto;
+  }
+  &.right {
+    margin-left: auto;
+  }
+}
+
+.spinner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.link {
+  font-size: inherit;
+  max-width: fit-content;
+  transition: color $transition;
+  text-decoration: none;
+  display: inline;
+
+  @include hoverWrapper {
+    color: $link-color-hover;
+
+    path {
+      transition: fill $transition;
+      fill: $link-color-hover;
+    }
+  }
+
+  &.with-arrow {
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    svg {
+      transition: transform $transition;
+    }
+
+    @include hoverWrapper {
+      svg {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  &.variant2 {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  &.variant3 {
+    font-weight: 700;
+    font-size: 18px;
+  }
+}

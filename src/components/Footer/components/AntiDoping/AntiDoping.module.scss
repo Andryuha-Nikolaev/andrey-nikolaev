@@ -1,0 +1,36 @@
+@import "../../../../style/vars";
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media screen and (min-width: $desk_sm) {
+    display: none;
+  }
+}
+
+.btn {
+  min-height: 70px !important;
+  font-size: 18px !important;
+}
+
+.btn1 {
+  background-color: #ea5763 !important;
+
+  @include hoverWrapper {
+    background-color: #ea5763 !important;
+    opacity: 0.9;
+    transition: opacity $transition;
+  }
+}
+
+.btn2 {
+  background-color: #3fa059 !important;
+
+  @include hoverWrapper {
+    background-color: #3fa059 !important;
+    opacity: 0.9;
+    transition: opacity $transition;
+  }
+}

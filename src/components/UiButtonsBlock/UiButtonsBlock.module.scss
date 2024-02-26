@@ -1,0 +1,24 @@
+@import "../../style/vars";
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 0;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 5px;
+  border: 1px dashed black;
+}
+
+.btn {
+  background-color: bisque !important;
+}
+
+.block-height {
+  transition: height $transition;
+}

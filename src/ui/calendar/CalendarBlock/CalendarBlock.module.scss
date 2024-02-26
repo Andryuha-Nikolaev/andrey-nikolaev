@@ -1,0 +1,62 @@
+@import "../../../style/vars";
+
+.block {
+  min-height: 300px;
+  position: relative;
+  &.loading {
+    pointer-events: none;
+  }
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity $transition,
+    visibility $transition;
+
+  &.loading {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.wrap {
+  max-width: 437px;
+}
+
+.date-template-day {
+  background-color: $white;
+  color: $color-text-primary;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all !important;
+
+  @include hoverWrapper {
+    background-color: $color-picker-hover !important;
+  }
+}
+
+.calendar {
+  color: $color-text-secondary;
+  background-color: $color-block-bg;
+  border-radius: 0;
+  padding: 12px 15px 16px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $tablet) {
+    padding: 12px 17px 20px;
+  }
+
+  @media screen and (min-width: $desk_md) {
+    padding: 12px 24px 24px;
+  }
+}

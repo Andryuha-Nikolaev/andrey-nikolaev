@@ -1,0 +1,183 @@
+@import "./vars";
+
+.p-datepicker-header {
+  padding: 0 !important;
+  height: 50px;
+  border-radius: 0 !important;
+  background-color: $color-block-bg !important;
+  border-bottom: none !important;
+}
+
+.p-datepicker {
+  border: none !important;
+}
+
+.p-datepicker table th > span {
+  font-family: $open-sans-font !important;
+  font-size: 18px !important;
+  text-transform: lowercase !important;
+  font-weight: 400 !important;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.p-datepicker-title {
+  pointer-events: none !important;
+}
+
+.p-datepicker-prev,
+.p-datepicker-next {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  height: 42px;
+  padding: 2px;
+
+  @include hoverWrapper {
+    background-color: $color-picker-hover !important;
+  }
+}
+
+.p-datepicker-next {
+  justify-content: flex-end;
+}
+
+.p-datepicker-prev {
+  justify-content: flex-start;
+}
+
+.p-datepicker table td > span {
+  border-radius: 0;
+  border: none;
+  box-shadow: none !important;
+  font-family: $open-sans-font !important;
+}
+
+.p-datepicker-today {
+  background-color: $blue;
+
+  span {
+    color: $color-text-secondary !important;
+    background-color: $blue !important;
+  }
+}
+
+.p-datepicker-other-month {
+  background-color: transparent;
+}
+
+.p-datepicker-title {
+  order: -1;
+  margin: 0 !important;
+  margin-right: auto !important;
+
+  .p-datepicker-month {
+    margin-right: 10px;
+  }
+
+  .p-link {
+    color: $color-text-secondary !important;
+    padding: 8px 0 !important;
+    font-family: $russo-one-font !important;
+    font-weight: 400 !important;
+    font-size: 24px;
+    @include hoverWrapper {
+      background-color: $color-picker-hover !important;
+    }
+  }
+}
+
+// на главной
+.main-calendar-block {
+  .p-datepicker-next,
+  .p-datepicker-prev {
+    width: 36px;
+  }
+
+  .p-calendar {
+    width: 100%;
+  }
+
+  table {
+    border-spacing: 0 !important;
+    border-collapse: unset !important;
+  }
+
+  .p-datepicker table td {
+    padding: 0 !important;
+  }
+
+  .p-datepicker table td > span {
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    height: 42px;
+    pointer-events: none;
+
+    @media screen and (min-width: $desk_md) {
+      height: 55px;
+    }
+
+    @include hoverWrapper {
+      background-color: $color-picker-hover !important;
+    }
+  }
+
+  .p-highlight {
+    span {
+      pointer-events: none !important;
+    }
+
+    position: relative;
+    background-color: transparent !important;
+    color: $color-text-secondary !important;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      height: 3px;
+      background-color: $dark-red;
+    }
+  }
+}
+
+// с выбором периода
+.period-calendar-block {
+  .p-datepicker-next,
+  .p-datepicker-prev {
+    width: 32px;
+  }
+
+  .p-inputwrapper {
+    width: 100%;
+  }
+  .p-monthpicker-month {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: calc(33.33% - 6px) !important;
+    background-color: $white !important;
+    color: $color-text-primary !important;
+    height: 48px;
+    font-family: $open-sans-font !important;
+    font-size: 14px !important;
+
+    @include hoverWrapper {
+      background-color: $color-picker-hover !important;
+    }
+
+    &.p-disabled {
+      opacity: 0.6;
+    }
+  }
+  .p-highlight {
+    background-color: $blue !important;
+    color: $color-text-secondary !important;
+  }
+  .p-monthpicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

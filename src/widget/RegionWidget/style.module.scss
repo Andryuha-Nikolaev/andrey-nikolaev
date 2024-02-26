@@ -1,0 +1,58 @@
+.container {
+  max-width: 480px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 229px auto;
+}
+
+.region-list {
+  margin-top: 16px;
+  max-height: 484px;
+  overflow: auto;
+
+  scrollbar-width: thin !important;
+
+  li > &__item {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    width: 100%;
+    padding: 12px 18px 12px 16px;
+    background-color: white;
+
+    svg {
+      path {
+        fill: #1f1f1f;
+      }
+    }
+
+    &:hover {
+      color: white;
+      background-color: #1f1f1f;
+
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  li:not(:last-child) > &__item {
+    border-bottom: 1px solid #b2b6b9;
+  }
+
+  &.regions {
+    li {
+      border-right: 1px solid #e5e4de;
+    }
+  }
+
+  &.areas {
+    li {
+      border-left: 1px solid #e5e4de;
+    }
+  }
+}

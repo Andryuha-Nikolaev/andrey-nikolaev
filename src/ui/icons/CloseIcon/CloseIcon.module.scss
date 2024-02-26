@@ -1,0 +1,40 @@
+@import "../../../style/vars";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  @include hoverWrapper {
+    .line {
+      fill: $color-close-icon-hover;
+    }
+    .stroke {
+      fill: $color-close-icon-hover;
+      stroke: $color-close-icon-hover;
+    }
+  }
+  &.transparent {
+    @include hoverWrapper {
+      .stroke {
+        fill: transparent;
+        stroke: transparent;
+      }
+    }
+  }
+}
+
+.line {
+  transition: fill $transition;
+}
+.stroke {
+  transition: fill $transition, stroke $transition;
+}
+
+.icon {
+  width: 20px;
+  height: auto;
+}

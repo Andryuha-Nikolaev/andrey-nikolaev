@@ -1,0 +1,23 @@
+@import "../../style/vars";
+
+.wrapper {
+  padding: 30px 16px;
+  background-color: $color-block-bg;
+  color: $color-text-secondary;
+  max-width: 1014px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 30px 40px;
+  }
+}
+
+.fields-wrap {
+  padding: 32px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 27px;
+}
+
+.btn-wrap {
+  max-width: 322px;
+}

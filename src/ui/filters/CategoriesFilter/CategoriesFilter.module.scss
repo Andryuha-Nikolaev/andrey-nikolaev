@@ -1,0 +1,61 @@
+@import "../../../style/vars";
+
+.wrap {
+  max-width: 327px;
+}
+
+.filter-title {
+  margin-bottom: 10px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  cursor: pointer;
+  // min-height: 30px;
+  // border-bottom: 1px solid $dark-gray;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  // padding: 0 16px;
+  &.active {
+    // pointer-events: none;
+    // background-color: $black;
+    // color: $color-text-secondary;
+
+    .point {
+      background-color: $dark-red !important;
+    }
+  }
+  @include hoverWrapper {
+    .point {
+      background-color: $blue;
+    }
+  }
+}
+
+.radio {
+  flex-shrink: 0;
+  // width: 22px;
+  // height: 22px;
+  // border-radius: 50%;
+  border: 1.5px solid $black;
+  position: relative;
+  width: min-content;
+  // &.active {
+  //   border-color: $white;
+  // }
+}
+
+.point {
+  width: 8px;
+  height: 8px;
+  margin: 5.5px;
+  // border-radius: 50%;
+  background-color: transparent;
+  // transition: background-color $transition-fast;
+}

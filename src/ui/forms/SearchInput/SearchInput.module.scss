@@ -1,0 +1,37 @@
+@import "src/style/vars";
+
+.label {
+  position: relative;
+}
+
+.input {
+  height: 44px;
+  border: none;
+  border-bottom: 1px solid rgb(31, 31, 31);
+  border-top: 1px solid rgb(31, 31, 31);
+  border-radius: 0;
+  width: 100%;
+  padding: 0 40px 0 16px;
+  font-size: 14px;
+
+  &::placeholder {
+    color: $dark-gray;
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+
+  path {
+    transition: stroke $transition-fast;
+  }
+
+  @include hoverWrapper {
+    path {
+      stroke: $dark-red;
+    }
+  }
+}

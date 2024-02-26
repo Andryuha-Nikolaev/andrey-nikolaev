@@ -1,0 +1,64 @@
+@import "../../../style/vars";
+
+.h1 {
+  @include text-h1;
+}
+.h2 {
+  @include text-h2;
+}
+.h3 {
+  @include text-h3;
+}
+.h4 {
+  @include text-h4;
+}
+.h5 {
+  @include text-h5;
+}
+.h6 {
+  @include text-h6;
+}
+.text-lg {
+  @include text-lg;
+}
+.text-md {
+  @include text-md;
+}
+.text-sm {
+  @include text-sm;
+}
+
+.span {
+  display: inline;
+}
+
+.russo {
+  font-family: $russo-one-font;
+}
+
+.open-sans {
+  font-family: $open-sans-font;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.black {
+  color: $color-text-primary;
+}
+.white {
+  color: $color-text-secondary;
+}
+
+.red {
+  color: $color-text-error;
+}
+
+.dark-gray {
+  color: $dark-gray;
+}

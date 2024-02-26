@@ -1,0 +1,55 @@
+@import "../../../style/vars";
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &.header {
+    @media screen and (min-width: $tablet) {
+      gap: 24px;
+    }
+  }
+}
+
+.link {
+  border-radius: 50%;
+  background-color: $color-social-link-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: fill $transition;
+
+  @include hoverWrapper {
+    path {
+      fill: $color-social-link-hover;
+    }
+  }
+
+  &.header {
+    aspect-ratio: 1/1;
+    max-width: 56px;
+    width: 100%;
+
+    @media screen and (min-width: $mobile_sm) {
+      width: 56px;
+      height: 56px;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 48px;
+      height: 48px;
+    }
+    @media screen and (min-width: $desk_sm) {
+    }
+  }
+
+  &.footer {
+    width: 39px;
+    height: 39px;
+    @media screen and (min-width: $tablet) {
+    }
+    @media screen and (min-width: $desk_sm) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "@vars";
+
+.item-card {
+  display: grid;
+  padding: 16px;
+  background-color: #f6f6f6;
+
+  @media screen and (min-width: $desk-sm) {
+    padding: 30px 100px 30px 30px;
+    grid-template-areas: "logo name link";
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    justify-content: start;
+    column-gap: 30px;
+  }
+
+  grid-template-areas:
+    "logo link"
+    "name name";
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  align-content: center;
+
+  &__logo,
+  &__link {
+    display: flex;
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__name {
+    grid-area: name;
+    font-size: 18px;
+
+    .name {
+      text-decoration: underline;
+    }
+  }
+
+  &__link {
+    justify-content: end;
+    grid-area: link;
+
+    @media screen and (min-width: $desk-sm) {
+      margin-left: auto;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      &:hover {
+        &::after {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}

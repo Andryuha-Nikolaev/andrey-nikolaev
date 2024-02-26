@@ -1,0 +1,35 @@
+@import "../../../style/vars";
+
+.block {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: $z-index-cookies-block;
+}
+
+.content {
+  padding: 24px 16px 42px;
+  background: rgba(31, 31, 31, 0.8);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  max-width: 375px;
+  margin: 0 auto;
+  color: $color-text-secondary;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 53px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 552px;
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.btn {
+  @media screen and (min-width: $tablet) {
+    max-width: 140px !important;
+    min-height: 36px !important;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../../style/vars";
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-right: 5px;
+}
+
+.link {
+  // border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  path {
+    fill: $dark-gray;
+  }
+  transition: fill $transition;
+
+  @include hoverWrapper {
+    path {
+      fill: $color-social-link-hover;
+    }
+  }
+
+  // &.footer {
+  //   width: 39px;
+  //   height: 39px;
+  //   @media screen and (min-width: $tablet) {
+  //   }
+  //   @media screen and (min-width: $desk_sm) {
+  //     width: 32px;
+  //     height: 32px;
+  //   }
+  // }
+}

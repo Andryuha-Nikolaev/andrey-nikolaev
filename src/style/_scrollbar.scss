@@ -1,0 +1,60 @@
+@import "./vars";
+
+// * {
+//   scrollbar-width: auto;
+//   scrollbar-color: $color-scrollbar-thumb $color-scrollbar-track;
+// }
+
+// /* для Chrome/Edge/Safari */
+// *::-webkit-scrollbar {
+//   height: auto;
+//   width: auto;
+// }
+// *::-webkit-scrollbar-track {
+//   background: $color-scrollbar-track;
+//   // border-radius: 10px;
+// }
+// *::-webkit-scrollbar-thumb {
+//   background-color: $color-scrollbar-thumb;
+//   border-radius: 10px;
+//   border: 2px solid $color-scrollbar-track;
+// }
+
+// Полностью скрыть скролл
+
+@media (hover: hover) {
+  * {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+  *::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+.simplebar-track {
+  width: 2px !important;
+  background-color: $dark-red;
+}
+
+.simplebar-scrollbar {
+  padding: 0 !important;
+  background-color: $black;
+}
+
+.main-events-block {
+  .simplebar-track {
+    right: -8px;
+
+    @media screen and (min-width: $tablet) {
+      right: -6px;
+    }
+  }
+}
+
+.athlete-modal {
+  .simplebar-track {
+    right: -15px;
+  }
+}

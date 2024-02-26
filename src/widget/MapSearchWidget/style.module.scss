@@ -1,0 +1,14 @@
+@import "@vars";
+
+.search-container {
+  width: 355px;
+
+  .label {
+    box-shadow: 0px 4px 20px 0px rgba(67, 67, 67, 0.15);
+    input {
+      @media screen and (min-width: $tablet) {
+        border: 0 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.breadcrumbs {
+  display: flex;
+
+  li {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 28px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8586 2.24968L8.7451 6.23668C8.81336 6.30671 8.85156 6.40063 8.85156 6.49843C8.85156 6.59622 8.81336 6.69015 8.7451 6.76018L4.8586 10.7487C4.8268 10.7813 4.78879 10.8073 4.74679 10.825C4.7048 10.8427 4.65968 10.8519 4.6141 10.8519C4.56852 10.8519 4.5234 10.8427 4.48141 10.825C4.43941 10.8073 4.4014 10.7813 4.3696 10.7487C4.30418 10.6817 4.26756 10.5918 4.26756 10.4982C4.26756 10.4046 4.30418 10.3147 4.3696 10.2477L8.02435 6.49843L4.3696 2.74993C4.30441 2.68299 4.26793 2.59324 4.26793 2.4998C4.26793 2.40636 4.30441 2.31662 4.3696 2.24968C4.4014 2.21702 4.43941 2.19106 4.48141 2.17334C4.5234 2.15562 4.56852 2.14648 4.6141 2.14648C4.65968 2.14648 4.7048 2.15562 4.74679 2.17334C4.78879 2.19106 4.8268 2.21702 4.8586 2.24968Z' fill='%235A5A5A'/%3E%3C/svg%3E%0A");
+        right: -14px;
+        transform: translateX(50%);
+      }
+    }
+
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 400;
+      color: #5a5a5a;
+    }
+
+    &:last-child {
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+.name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}

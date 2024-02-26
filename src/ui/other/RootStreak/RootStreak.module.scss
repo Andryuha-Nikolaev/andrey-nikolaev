@@ -1,0 +1,13 @@
+@import "../../../style/vars";
+
+.streak {
+  &.fixed {
+    height: $header-height-mobile;
+    @media screen and (min-width: $tablet) {
+      height: $header-height-tablet;
+    }
+    @media screen and (min-width: $desk_sm) {
+      height: $header-height-desk;
+    }
+  }
+}

@@ -1,0 +1,173 @@
+@import "src/style/vars";
+
+.wrap {
+  width: calc(100vw - 20px);
+  max-width: 327px;
+  @media screen and (min-width: $mobile) {
+    max-width: 500px;
+  }
+
+  @media screen and (min-width: $desk_sm) {
+    max-width: 898px;
+    max-height: 580px;
+  }
+  @media screen and (min-width: $desk_md) {
+  }
+}
+
+.scrollbar {
+  max-height: 94dvh;
+
+  @media screen and (min-width: $tablet) {
+  }
+}
+
+.content {
+  @media screen and (min-width: $desk_sm) {
+    display: grid;
+    grid-template-columns: 438px 1fr;
+    gap: 24px;
+    height: 580px;
+  }
+}
+
+.img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  @media screen and (min-width: $desk_sm) {
+    height: 100%;
+    aspect-ratio: unset;
+  }
+}
+
+.tourney-wrap {
+  padding: 16px 0;
+  border-bottom: 1px solid $dark-red;
+  display: block;
+}
+
+.name {
+  margin: 16px 0 8px;
+
+  @media screen and (min-width: $desk_sm) {
+    margin: 24px 0 8px;
+  }
+}
+
+.city {
+  margin-bottom: 20px;
+}
+
+.info {
+  padding: 0 0 32px;
+
+  @media screen and (min-width: $desk_sm) {
+    // display: grid;
+    // grid-template-rows: auto 1fr;
+    padding: 16px 0 32px 0;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.texts {
+  padding: 0 16px;
+
+  @media screen and (min-width: $desk_sm) {
+    padding-right: 32px;
+    padding-left: 0;
+  }
+}
+
+.olimpic {
+  padding-left: 27px;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.olimpic-text {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #a5844d;
+  }
+
+  &.silver {
+    &::before {
+      background-color: #bfbcb8;
+    }
+  }
+  &.gold {
+    &::before {
+      background-color: #f5c62f;
+    }
+  }
+}
+
+.awards {
+  padding-left: 40px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media screen and (min-width: $desk_sm) {
+    padding-left: 24px;
+    padding-right: 0;
+  }
+}
+.awards-wrap {
+  overflow: hidden;
+
+  @media screen and (min-width: $desk_sm) {
+    flex-grow: 1;
+  }
+}
+
+.awards-scroll {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+
+  //   max-width: 327px;
+  // @media screen and (min-width: $mobile) {
+  //   max-width: 500px;
+  // }
+  @media screen and (min-width: $desk_sm) {
+    height: 100%;
+    width: 404px;
+    pointer-events: all;
+  }
+}
+
+.award {
+  position: relative;
+  // display: contents;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: $dark-red;
+  }
+}
+
+.award-text {
+  display: contents;
+}
+
+.president-awards-title {
+  padding: 32px 16px 16px;
+}

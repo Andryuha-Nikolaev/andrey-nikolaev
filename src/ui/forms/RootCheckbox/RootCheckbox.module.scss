@@ -1,0 +1,66 @@
+@import "../../../style/vars"; //чекбокс
+/* Стили для к {онтейнера чекбокса */
+.checkbox-wrap {
+  width: 100%;
+}
+
+.checkbox-label {
+  width: fit-content;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  // font-size: 10px;
+  // opacity: 0.7;
+  position: relative;
+}
+
+/* Скрыть оригинальный инпут чекбокса */
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Стили для кастомного внешнего вида чекбокса */
+.checkbox-custom {
+  flex-shrink: 0;
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: 1px solid $white;
+  margin-right: 4px;
+
+  // @media screen and (min-width: $tablet) {
+  //   width: 11px;
+  //   height: 11px;
+  // }
+}
+
+.checkbox-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color: transparent;
+  // transition: background-color $transition;
+}
+
+/* Стили для отмеченного кастомного чекбокса */
+.checkbox-input:checked + .checkbox-custom::after {
+  background-color: $color-checkbox-checked;
+}
+
+.checkbox-input:not(:checked) + .checkbox-custom:hover::after {
+  background-color: $color-checkbox-hover !important; /* Замените $new-hover-color на ваш цвет */
+}
+
+.error-message {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  font-size: 12px;
+}

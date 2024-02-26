@@ -1,0 +1,16 @@
+@import "../../../../style/vars";
+
+.block {
+  max-width: 150px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 154px;
+  }
+  @media screen and (min-width: $desk_md) {
+    max-width: 222px;
+  }
+}
+
+.logo {
+  width: 100%;
+}

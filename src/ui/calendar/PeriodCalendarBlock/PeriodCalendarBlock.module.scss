@@ -1,0 +1,80 @@
+@import "../../../style/vars";
+
+.calendar {
+  color: $color-text-secondary;
+  background-color: $color-block-bg;
+  border-radius: 0;
+  padding: 12px 24px 24px;
+  box-sizing: border-box;
+}
+
+.block {
+  // max-width: 322px;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input {
+  min-height: 48px;
+  background-color: $color-block-bg;
+  color: $color-text-secondary;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  path {
+    transition: fill $transition-fast;
+  }
+
+  @include hoverWrapper {
+    path {
+      fill: $dark-red;
+    }
+  }
+
+  &.open {
+    path {
+      fill: $dark-red;
+    }
+  }
+}
+
+.calendars {
+  position: relative;
+}
+
+.wrap {
+  z-index: $z-index-calendar;
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility $transition,
+    opacity $transition;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.wrap2 {
+}
+
+.input {
+}
+
+.input2 {
+}
+
+.component {
+}

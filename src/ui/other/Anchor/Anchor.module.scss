@@ -1,0 +1,12 @@
+@import "../../../style/vars";
+
+.anchor {
+  &.sticky-block {
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      top: -140px;
+    }
+    @media screen and (min-width: $desk_sm) {
+    }
+  }
+}
