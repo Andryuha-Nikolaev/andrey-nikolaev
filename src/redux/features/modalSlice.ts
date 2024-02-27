@@ -1,26 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 
 export type ModalConfig = {
-  modalId?: "default" | "alt" | "notification" | "athlete"
+  modalId: "default" | "notification" | null
   title?: string
   text?: string
   notClickableOverlay?: boolean
   hiddenCloseBtn?: boolean
-  athleteData?: {
-    image: string
-    tourney?: {
-      name: string
-      place: string
-    }
-    name: string
-    placeOfBirth: string
-    olympicAwards?: {
-      medal: string
-      year: string
-    }[]
-    awards: string[]
-    presidentAwards?: string[]
-  }
+  modalClassName?: string
+  contentClassName?: string
 }
 
 type ModalState = {
@@ -31,7 +18,7 @@ type ModalState = {
 const initialState = {
   isOpen: false,
   config: {
-    modalId: undefined,
+    modalId: null,
   },
 } as ModalState
 
@@ -45,6 +32,7 @@ export const modal = createSlice({
     },
     closeModal: (state) => {
       state.isOpen = false
+      state.config = { modalId: null }
     },
   },
 })

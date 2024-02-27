@@ -13,13 +13,13 @@
   align-items: center;
   visibility: hidden;
   opacity: 0;
-  transition:
-    opacity $transition,
-    visibility $transition;
 
   z-index: $z-index-modal;
 
   &.open {
+    transition:
+      opacity $transition,
+      visibility $transition;
     visibility: visible;
     opacity: 1;
   }
@@ -28,6 +28,8 @@
 .modal {
   position: relative;
   background-color: $color-modal-bg;
+  width: calc(100% - 20px);
+  max-width: 500px;
 
   min-height: 100px;
   // max-height: 96vh;
@@ -42,9 +44,12 @@
   width: 40px;
   height: 40px;
   z-index: 5;
+}
 
-  @media screen and (min-width: $desk_sm) {
-    top: -46px;
-    right: -56px;
-  }
+.content {
+  padding: 50px 10px;
+}
+
+.scrollbar {
+  max-height: calc(100vh - 160px);
 }

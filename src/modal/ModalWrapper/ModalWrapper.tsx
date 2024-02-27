@@ -11,6 +11,7 @@ import DefaultModal from "../DefaultModal/DefaultModal"
 import NotificationModal from "../NotificationModal/NotificationModal"
 import AthleteModal from "../AthleteModal/AthleteModal"
 import useScrollLock from "@/hooks/useScrollLock/useScrollLock"
+import SimpleBar from "simplebar-react"
 
 const modalComponents: Record<string, React.FC<ModalConfig>> = {
   default: DefaultModal,
@@ -31,8 +32,6 @@ const ModalWrapper = () => {
 
   const ModalComponent = modalComponents[modalId!] || null
 
-  const { isTablet } = useAppSelector((state) => state.site)
-
   return (
     <div
       onClick={() => {
@@ -44,7 +43,11 @@ const ModalWrapper = () => {
     >
       <div
         onClick={(event) => event.stopPropagation()}
-        className={classNames(s["modal"], isOpen && s["open"])}
+        className={classNames(
+          s["modal"],
+          isOpen && s["open"],
+          config.modalClassName && config.modalClassName
+        )}
       >
         {!hiddenCloseBtn && (
           <button
@@ -52,22 +55,19 @@ const ModalWrapper = () => {
             onClick={handleClose}
             className={classNames(s["close-btn"])}
           >
-            <CloseIcon
-              color={
-                !isTablet
-                  ? "#fff"
-                  : modalId === "notification"
-                    ? "#000"
-                    : "#fff"
-              }
-              strokeColor={
-                modalId === "notification" ? "transparent" : "#b2b6b9"
-              }
-              form="round"
-            />
+            <CloseIcon color="#000" form="rect" />
           </button>
         )}
-        {ModalComponent && <ModalComponent {...config} />}
+        <div
+          className={classNames(
+            s["content"],
+            config.contentClassName && config.contentClassName
+          )}
+        >
+          <SimpleBar className={s["scrollbar"]}>
+            {ModalComponent && <ModalComponent {...config} />}
+          </SimpleBar>
+        </div>
       </div>
     </div>
   )
