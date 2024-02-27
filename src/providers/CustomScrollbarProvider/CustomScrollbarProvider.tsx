@@ -1,7 +1,7 @@
 import CustomScrollbar from "./components/CustomScrollbar/CustomScrollbar"
 
-const CustomScrollbarWrapper = () => {
+const CustomScrollbarProvider = () => {
   return <CustomScrollbar />
 }
 
-export default CustomScrollbarWrapper
+export default CustomScrollbarProvider

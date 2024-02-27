@@ -15,7 +15,6 @@ import "swiper/css/navigation"
 
 import Header from "@/components/Header/Header"
 import ModalWrapper from "@/modal/ModalWrapper/ModalWrapper"
-import CustomScrollbarWrapper from "@/common/CustomScrollbarWrapper/CustomScrollbarWrapper"
 import RootStreak from "@/ui/other/RootStreak/RootStreak"
 import classNames from "classnames"
 import Anchor from "@/ui/other/Anchor/Anchor"
@@ -68,7 +67,7 @@ export default function RootLayout({
         <StoreProvider>
           <AllProviders>
             <Anchor id={anchorsConstants.ANCHOR_TOP} />
-            <CustomScrollbarWrapper />
+
             <Header />
             <RootStreak variant="fixed-header" />
             {children}

@@ -1,13 +1,11 @@
 import React from "react"
 import s from "./MainBannerBlock.module.scss"
 
-import { getAllBanners } from "@/services/getBanners"
 import MainBannerSlider from "./MainBannerSlider/MainBannerSlider"
 import Container from "@/common/MainContainer/MainContainer"
+import { banners } from "@/data/banners"
 
 async function MainBannerBlock() {
-  const banners = await getAllBanners()
-
   return (
     <section className={s["block"]}>
       <Container>
